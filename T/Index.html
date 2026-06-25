@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confession of Love</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       MUSIC PLAYER (autoplay after first click)
+  ============================================================ -->
+  <div id="music-player">
+    <button id="music-toggle" title="Toggle Music">
+      <i class="fa-solid fa-music"></i>
+    </button>
+  </div>
+
+  <!-- Global heart particles layer -->
+  <div id="global-hearts"></div>
+
+  <!-- ============================================================
+       SCENE 1: LOADING SCREEN
+  ============================================================ -->
+  <div id="loading-screen" class="scene active">
+    <div class="loading-content">
+      <div class="heart-loader">
+        <div class="heart"></div>
+        <div class="heart-pulse"></div>
+      </div>
+      <p class="loading-text">Preparing Something Special...</p>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCENE 2: OPENING
+  ============================================================ -->
+  <div id="opening-screen" class="scene">
+    <div id="particles-container"></div>
+
+    <div class="opening-content">
+      <div class="typing-area">
+        <p id="typing-line" class="typing-text"></p>
+      </div>
+      <button id="btn-mulai" class="btn btn-primary hidden">
+        <span class="btn-text">Mulai</span>
+        <span class="btn-ripple"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCENE 3: PERJALANAN PERASAAN
+  ============================================================ -->
+  <div id="journey-screen" class="scene">
+    <div class="journey-content">
+      <div id="journey-sentence" class="journey-sentence"></div>
+      <button id="btn-lanjut" class="btn btn-secondary">
+        <span class="btn-text">Lanjut →</span>
+        <span class="btn-ripple"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCENE 4: SURAT
+  ============================================================ -->
+  <div id="letter-screen" class="scene">
+    <div class="letter-wrapper">
+      <button id="btn-buka-surat" class="btn btn-primary">
+        <span class="btn-text">💌 Buka Surat</span>
+        <span class="btn-ripple"></span>
+      </button>
+
+      <div id="letter-card" class="letter-card hidden">
+        <p class="letter-salutation">FOR YOU,</p>
+        <div id="letter-body" class="letter-body"></div>
+        <p class="letter-signature">— V ❤️</p>
+        <button id="btn-after-letter" class="btn btn-primary hidden">
+          <span class="btn-text">Selanjutnya →</span>
+          <span class="btn-ripple"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCENE 5: PERTANYAAN TERAKHIR
+  ============================================================ -->
+  <div id="question-screen" class="scene">
+    <div class="question-content">
+      <h2 class="question-title">Would You Give Me A Chance?</h2>
+      <div class="answer-buttons">
+        <button id="btn-ya" class="btn btn-answer btn-yes">
+          <span class="btn-text">❤️ Ya</span>
+          <span class="btn-ripple"></span>
+        </button>
+        <button id="btn-jalani" class="btn btn-answer btn-maybe">
+          <span class="btn-text">😊 Kita Jalani Dulu</span>
+          <span class="btn-ripple"></span>
+        </button>
+        <button id="btn-teman" class="btn btn-answer btn-friend">
+          <span class="btn-text">🤍 Tetap Berteman</span>
+          <span class="btn-ripple"></span>
+        </button>
+      </div>
+
+      <div id="response-message" class="response-message hidden"></div>
+      <div id="hearts-container"></div>
+
+      <button id="btn-to-closing" class="btn btn-primary hidden">
+        <span class="btn-text">Penutup →</span>
+        <span class="btn-ripple"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCENE 6: PENUTUP
+  ============================================================ -->
+  <div id="closing-screen" class="scene">
+    <div class="closing-content">
+      <div id="closing-lines"></div>
+      <p class="made-with"> V ❤️</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
